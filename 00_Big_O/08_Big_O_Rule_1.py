@@ -1,22 +1,20 @@
-# Version#2 of nemo
+# Rule 1 - Worst Case
+# When analyzing an algorithm, we always consider the worst case scenario.
+# This is because we want to know the maximum time an algorithm can take to complete.
+
 import time
 
-# Arrays (lists in Python)
-nemo = ['nemo']
 everyone = ['dory', 'bruce', 'marlin', 'nemo', 'gill', 'bloat', 'nigel', 'squirt', 'darla', 'hank']
-large = ['nemo'] * 1000  # Create a 100 Elements list and fill with 'nemo'
 
 def find_nemo(array):
-    # Start Time
     t0 = time.perf_counter()
     for item in array:
+        print("running")
         if item == "nemo":
             print("Found NEMO!")
-    # End Time
+            break
     t1 = time.perf_counter()
     print(f"Call to find Nemo took {(t1 - t0) * 1000:.4f} milliseconds.")
 
 
-# find_nemo(nemo)
-# find_nemo(everyone)
-find_nemo(large)
+find_nemo(everyone)
