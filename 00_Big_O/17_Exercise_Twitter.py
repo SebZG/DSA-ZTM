@@ -20,3 +20,4 @@ arr = [
 # What is the cost of this operation...
 
 len("asdjkl")
+# O(1) - constant time
