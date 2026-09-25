@@ -1,7 +1,13 @@
-# We can implement our own array with common methods such as get, push, pop, insert, and delete.
+# Implement our own array with common methods such as get, push, pop, insert, and delete.
+
+# search - O(n) - Linear Time
+# insert - O(n) - Linear Time
+# push* - O(1) - Constant Time
+# lookup - O(1) - Constant Time
+# delete - O(n) - Linear Time
 
 # get - O(1) - Constant Time
-# push - O(1) - Constant Time
+# push* - O(1) - Constant Time
 # pop - O(1) - Constant Time
 # insert - O(n) - Linear Time
 # delete - O(n) - Linear Time

@@ -23,10 +23,10 @@ def containsCommonItems1(arr1, arr2):
     for i in range(len(arr1)):
         for j in range(len(arr2)):
             if arr1[i] == arr2[j]:
-                return True
-    return False
+                return "Yes"
+    return "No"
 
-
+# 2nd solution - use a hash table - O(a + b) time complexity and O(a) space complexity
 # arr1 ==> {"a": True, "b": True, "c": True, "x": True}
 # arr2[i] == arr1.properties
 # O(n) + O(m) => O(a + b) => O(n)

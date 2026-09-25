@@ -29,7 +29,7 @@ def brute_force_pair_sum(array, sum):
 # We loop through the array once and for every element we encounter, we calculate its complement,i.e., the number which when added
 # to the element at hand, will give the sum.
 # Then we do a binary search for this complement in the remaining portion of the array
-# Since binary search is O(log n) and we loop through the array once, the overall complexity is O(nlog n), which is better than O(n^2)
+# Since binary search is O(log n) and we loop through the array once, the overall complexity is O(n log n), which is better than O(n^2)
 
 # array = [1, 2, 4, 5]
 # sum = 3
@@ -93,7 +93,7 @@ print(smart_pair_sum(array, sum))
 
 # Although we have achieved an efficient time complexity of O(n) we've done so under the assumption that the array will be sorted
 # What if the array isn't sorted?
-# In that case the first solution that comes to mind is that we can sort the array in O(nlog n) time
+# In that case the first solution that comes to mind is that we can sort the array in O(n log n) time
 # And then perform the smart_pair_sum operation on the sorted array to give us a final time complexity of O(nlog n)
 # Python's built-in sort method uses Tim Sort which has an average case time coplexity of O(nlog n)
 # So we can simply use that, or use a different sorting algorithm such as quicksort or heapsort.
@@ -132,13 +132,12 @@ print(sort_pair_sum(array, sum))
 
 
 def smartest_pair_sum(array, sum):
-    seen = dict()
+    seen = set()
     for item in array:
         comp = sum - item
-        if comp not in seen:
-            seen[item] = True
-        else:
+        if comp in seen:
             return "Yes"
+        seen.add(item)
     return "No"
 
 
